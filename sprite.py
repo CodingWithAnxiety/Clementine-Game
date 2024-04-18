@@ -53,7 +53,7 @@ class Player(pygame.sprite.Sprite):
         }
 
     def update(self):
-        # Check the movement keys. If so, let's move that direction!
+        # Check the movement keys. If so, let's move that direction and set our self.direction to that direction.
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
             self.rect.x -= self.speed
