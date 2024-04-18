@@ -18,7 +18,7 @@ class Player(pygame.sprite.Sprite):
 
         # Definte the last animation change!
         self.last_animation_change = 0
-        
+
         # Sets our speed.
         self.speed = 5
 
@@ -102,23 +102,3 @@ class Player(pygame.sprite.Sprite):
         # We need to be sure we're walking the right direction. This handles that.
         self.image = self.sprites[self.direction][self.frame]
 
-    
-
-
-    #     self.handle_animation()
-
-    # def handle_animation(self):
-    #     animation_cooldown = 100 
-    #     now = pygame.time.get_ticks()
-
-    #     # Check if enough time has passed to switch frames
-    #     if now - self.last_animation_change > animation_cooldown:
-    #         self.last_animation_change = now
-
-    #         # Increment the frame to create animation
-    #         self.frame = (self.frame + 1) % len(self.sprites[self.direction])
-    #     else:
-    #         self.frame = 0
-        
-    #     # Update the image based on direction and frame
-    #     self.image = self.sprites[self.direction][self.frame]
