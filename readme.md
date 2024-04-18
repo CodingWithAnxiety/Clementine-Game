@@ -2,7 +2,7 @@
 
 Hi!!! I'm testing some stuff for a game here.
 
-If you want to run it, please follow [this gude](https://docs.github.com/en/get-started/start-your-journey/downloading-files-from-github) to download the code. If you know how to clone it with [git](https://git-scm.com/download/win), do that preferably.
+If you want to run it, please follow [this guide](https://docs.github.com/en/get-started/start-your-journey/downloading-files-from-github) to download the code. If you know how to clone it with [git](https://git-scm.com/download/win), do that preferably.
 
 Since I'm assuming you're new to working with python, I've created two scripts that'll create your virtual enviroment for this.
 
