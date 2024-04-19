@@ -1,4 +1,5 @@
 import pygame
+from itertools import cycle
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, color, width, height, x, y):
@@ -8,7 +9,8 @@ class Player(pygame.sprite.Sprite):
 
         self.direction = "down"  # Start our direction facing the camera
         self.frame = 0 # Set the default frame to idle.
-        
+        self.frame_index = 0
+
         self.image = self.sprites["down"][0]
         self.rect = self.image.get_rect()
 
@@ -91,14 +93,19 @@ class Player(pygame.sprite.Sprite):
             # If we pass the cooldown, check the return of moving. If moving = true.
             if moving:
                 # We're moving, play the animation based on the frames in init.
-                walking_frames = [2, 0, 1]  # Walk 2 -> Idle -> Walk 1
-                self.frame = walking_frames[self.frame % len(walking_frames)]
+                walking_frames = [2, 0, 1, 0]  # Walk 2 -> Idle -> Walk 1
+
+                # I pray to god I never have to do this again. 
+                self.frame = walking_frames[self.frame_index]
+                self.frame_index = (self.frame_index + 1) % len(walking_frames) # This code is driving me absolutely mad. Thanks, Codecademy community for doing this for me.
+
                 # Test print to ensure that the animation frames are playing correctly
                 print("Walking frame:", self.frame)
             else:
                 # We're not moving, set frame to 0 (Idle)
                 self.frame = 0
+                self.frame_index = 0 # . . . let's *not* forget this next time. Sets the frame_index to 0 when not moving.
         
-        # We need to be sure we're walking the right direction. This handles that.
+        # We need to be sure we're walking the right direction AND updating our animation every frame! This handles that.
         self.image = self.sprites[self.direction][self.frame]
-
+        print (self.frame)
