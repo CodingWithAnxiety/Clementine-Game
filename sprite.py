@@ -24,6 +24,37 @@ class Player(pygame.sprite.Sprite):
         # Sets our speed.
         self.speed = 5
 
+    # def load_sprites(self, width, height): OLD SPRITES, HOLD INCASE THIS NEW STUFF DOESN'T WORK!
+    #         #TODO Update with new sprites (Let's do that *TODAY!*)
+    #     self.sprites = {
+    #         "down": [
+    #             pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Down_Idle.png").convert_alpha(), (width, height)),
+    #             pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Down_Walk1.png").convert_alpha(), (width, height)),
+    #             pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Down_Walk2.png").convert_alpha(), (width, height))
+    #         ],
+    #         "up": [
+    #             pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Up_Idle.png").convert_alpha(), (width, height)),
+    #             pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Up_Walk1.png").convert_alpha(), (width, height)),
+    #             pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Up_Walk2.png").convert_alpha(), (width, height))
+    #         ], 
+    #         # "side": [
+    #         #     pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Side_Idle.png").convert_alpha(), (width, height)),
+    #         #     pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Side_Walk1.png").convert_alpha(), (width, height)), 
+    #         #     pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Side_Walk2.png").convert_alpha(), (width, height))
+    #         # ],        This adds unneeded complexity to the overall code. Will renove later.
+    #         "left": [
+    #             # We have no left sprites, so we'll just flip the right ones and use those!
+    #             pygame.transform.flip(pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Side_Idle.png").convert_alpha(), (width, height)), True, False),
+    #             pygame.transform.flip(pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Side_Walk1.png").convert_alpha(), (width, height)), True, False),
+    #             pygame.transform.flip(pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Side_Walk2.png").convert_alpha(), (width, height)), True, False)
+    #         ],
+    #         "right": [
+    #             pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Side_Idle.png").convert_alpha(), (width, height)),
+    #             pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Side_Walk1.png").convert_alpha(), (width, height)),
+    #             pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Side_Walk2.png").convert_alpha(), (width, height))
+    #         ] 
+    #     }
+
     def load_sprites(self, width, height):
             #TODO Update with new sprites (Let's do that *TODAY!*)
         self.sprites = {
@@ -37,11 +68,6 @@ class Player(pygame.sprite.Sprite):
                 pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Up_Walk1.png").convert_alpha(), (width, height)),
                 pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Up_Walk2.png").convert_alpha(), (width, height))
             ], 
-            # "side": [
-            #     pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Side_Idle.png").convert_alpha(), (width, height)),
-            #     pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Side_Walk1.png").convert_alpha(), (width, height)), 
-            #     pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Side_Walk2.png").convert_alpha(), (width, height))
-            # ],        This adds unneeded complexity to the overall code. Will renove later.
             "left": [
                 # We have no left sprites, so we'll just flip the right ones and use those!
                 pygame.transform.flip(pygame.transform.scale(pygame.image.load(f"./img/sprites/player/Side_Idle.png").convert_alpha(), (width, height)), True, False),
